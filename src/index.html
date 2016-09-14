@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh-CN" ng-app>
+<html lang="zh-CN" ng-app="MyModule">
 <head>
     <meta charset="UTF-8">
     <title>Demo</title>
 </head>
 <body>
-    <input ng-model="greeting.text"/>
-    <p>{{greeting.text}},angular</p>
-
+    <div ng-controller="MyCtrl">
+        <loader howToload="loadDate()">nice</loader>
+        <loader howToload="loadDate()">nice</loader>
+    </div>
+    <div ng-controller="MyCtrl2">
+        <loader howToload="loadDate2()">nice</loader>
+    </div>
     <script src="../public/libs/angular/angular.js"></script>
+    <script type="text/javascript" src="HelloAngular_Mvc.js"></script>
 </body>
 </html>
