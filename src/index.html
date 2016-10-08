@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Demo</title>
+    <script src="../public/libs/angular/angular.js"></script>
+    <script type="text/javascript" src="angular-route.js"></script>
+    <script type="text/javascript" src="angular-animate.js"></script>
+    <script type="text/javascript" src="HelloAngular_Mvc.js"></script>
+    <script type="text/javascript" src="src.js"></script>
 </head>
 <body>
-    <div ng-controller="MyCtrl">
-        <loader howToload="loadDate()">nice</loader>
-        <loader howToload="loadDate()">nice</loader>
+    <div ng-view>
     </div>
-    <div ng-controller="MyCtrl2">
-        <loader howToload="loadDate2()">nice</loader>
-    </div>
-    <script src="../public/libs/angular/angular.js"></script>
-    <script type="text/javascript" src="HelloAngular_Mvc.js"></script>
 </body>
 </html>
