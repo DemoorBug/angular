@@ -6,9 +6,13 @@ var myModule = angular.module("MyModule",["ngRoute","ngAnimate","MyModuleCtrl"])
 }])*/
 myModule.config(function($routeProvider){
     $routeProvider.when('/hello',{
-        templateUrl: './list.html',
+        templateUrl: './hello.html',
         controller: 'HelloAngular'
-    }).otherwise({
+    }).when('/list',{
+        templateUrl: './list.html',
+        controller: 'ListAngular'
+    })
+    .otherwise({
         redirectTo: '/hello'
     })
 })

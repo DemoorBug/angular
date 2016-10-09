@@ -1,0 +1,32 @@
+.a{
+    background: blue;
+}
+.b{
+    background: red
+}
+.ng-enter {
+    z-index: 888
+}
+.ng-leave {
+    z-index: 999
+}
+.a.ng-enter {
+    transition: 1s all;
+}
+.a.ng-leave {
+    transition: 1s all;
+    display: none;
+}
+.b.ng-enter {
+    transition: 1s all;
+
+}
+.b.ng-leave {
+    transition: 1s all;
+    display: none;
+}
+m{
+    height: 200px;
+    width: 200px;
+    padding-top: 200px;
+}

@@ -2,6 +2,13 @@
 |时间|简介|内容|
 |:--:|:--:|:--:|
 |9-13|开始||
+## 核心特效
+```
+MVC
+模块化和依赖注入
+双向数据绑定
+指令
+```
 
 ## Controller 使用过程中的注意点
 ```
@@ -48,5 +55,34 @@ $scope的生命周期
 ng-repeat 迭代数组
 $emit() 向上去传播 向根          树型结构
 $broadcast() 向下去传播 向叶子   树型结构
+ng-band 避免出现{{}} 首页用ng-band 子页面因为已经被angular管理了，所以可以用{{}}
+ng-model 没有具体讲解，不过看起来和上面挺像   <input>, <select>, <textarea>, 元素支持该指令。
+ng-class 接受表达式 ng-class='{moss:Nime,asd:Asd}' 如果Nime为true,则赋值moss
+ng-show 显示
+ng-hide
 ```
 
+## 路由、模块、依赖注入
+```
+使用 ngRoute 进行视图直接的路由
+$routeProvider  有两个方法
+    when        /demo
+    otherwise   默认跳转
+
+```
+
+## github 搜索  Angular-ui项目
+
+## 指令
+```
+myModule.directive("hello",function(){
+    return {
+        restrict: 'AEMC',  E 元素 C class A 自定义属性 M 注释<!-- directive:hello --> 注意两边有空格   
+        E A 常用
+        template: '<div>Hi everyone!</div>',
+        replace: true
+
+        templateUrl: 'hello.html'
+    }
+    })
+```
