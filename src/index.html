@@ -11,7 +11,13 @@
     <link rel="stylesheet" type="text/css" href="css.css">
 </head>
 <body>
-    <div ng-view class="m {{is}}">
+<!--     <div ng-view class="m {{is}}">
+    </div> -->
+    <div ng-controller="MyCtrl">
+        <loader howToLoad="loadData()">加载</loader>
+    </div>
+    <div ng-controller="MyCtrl2">
+        <loader howToLoad="loadData2()">加载2</loader>
     </div>
 </body>
 </html>

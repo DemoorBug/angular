@@ -83,6 +83,28 @@ myModule.directive("hello",function(){
         replace: true
 
         templateUrl: 'hello.html'
+
+        transclude: true 可以嵌套
+        template: "<div>Hi everyone!<div ng-transclude></div> </div> "
+ 
+        compile: function(){  自定义compile
+
+        }
+
+        link: function(scope,element,attr){ 操作DOM 绑定事件，作用域
+            
+        }
+
+        controller: function($scope) {   应该是暴露一组函数，别人可以调用。给外部调用
+            $scope.abilities = [];
+            this.addStrength= function() {
+                $scope.abilities.push('strength')
+            }
+        }
+        require: '^superman',  依赖于superman指令  这样就可以调用到里面的controller
+        link: function(scope,element,attrs,supermanCtrl) {   supermanCtrl 就可以调用到依赖superman指令暴露出的controller函数
+
+        }
     }
     })
 ```
